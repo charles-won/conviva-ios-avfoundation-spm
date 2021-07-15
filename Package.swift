@@ -30,8 +30,7 @@ let package = Package(
               dependencies: [
                 .target(name: "ConvivaSDK"),
                 .target(name: "ConvivaAVFoundation")
-              ],
-	      path: "."
+              ]
             )
      ]
 )
