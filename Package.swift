@@ -17,20 +17,20 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ConvivaAVFoundation",
-            url: "https://github.com/Conviva/ConvivaAVFoundation/raw/4.0.17/Framework/ConvivaAVFoundation.xcframework.zip",
-            checksum: "687bbc63f2d16ff50336d223180dc9513baf42585e3531b4d9131e4a8c316811"),
+            url: "https://github.com/Conviva/ConvivaAVFoundation/raw/4.0.21/Framework/ConvivaAVFoundation.xcframework.zip",
+            checksum: "a9c9e8f62070e4673798b6affcf5ff487699414a21ca64cacee7e520d5b8d081"),
         
-        .binaryTarget(
-            name: "ConvivaSDK",
-            url: "https://github.com/Conviva/ConvivaSDK/raw/4.0.17/Framework/ConvivaSDK.xcframework.zip",
-            checksum: "e374b6d356c9984c9b032affccd0b4550decd87f6fa6df6742c0787fa72a2a86"),
-
-        .target(
-              name: "ConvivaAVFoundationTarget",
-              dependencies: [
-                .target(name: "ConvivaSDK"),
-                .target(name: "ConvivaAVFoundation")
-              ]
+            .binaryTarget(
+                name: "ConvivaSDK",
+                url: "https://github.com/Conviva/ConvivaSDK/raw/4.0.23/Framework/ConvivaSDK.xcframework.zip",
+                checksum: "a5751ed35ddabbc5fe87aa86c0c0ea2a1fc36189d3a2a8c9154286601c240922"),
+        
+            .target(
+                name: "ConvivaAVFoundationTarget",
+                dependencies: [
+                    .target(name: "ConvivaSDK"),
+                    .target(name: "ConvivaAVFoundation")
+                ]
             )
-     ]
+    ]
 )
